@@ -1,40 +1,25 @@
 "use client";
 
 import Button from "@/components/Ui/CSR/Button";
-import { useNavBar } from "@/hooks/useNavBar";
-import NavBar from "@/components/Ui/SSR/NavBar";
+import NavBar from "@/components/Ui/SSR/NavBar/NavBar";
 import { useRouter } from "next/navigation";
 import { NavFallbackData } from "@/constants/Constants";
 import Link from "next/link";
 import { useIsMobileMenuOpenStore } from "@/store/navStore";
 
-const navHrefMap: Record<string, string> = {
-	Templates: "/#templates",
-	Features: "/#features",
-	"How It Works": "/#how-it-works",
-	Reviews: "/#reviews",
-};
-
 export default function NavBarContainer() {
 	const router = useRouter();
 	const closeMenu = useIsMobileMenuOpenStore((state) => state.setMenu);
-	const { isLoading, data, isSuccess } = useNavBar();
 
-	if (isLoading) {
-		return <NavBar navbarBrand="ResuMake" navbarItems={[]} />;
-	}
-
-	const navbarData = isSuccess && data?.data ? data.data : NavFallbackData;
+	const navbarData = NavFallbackData;
 	const navbarBrand = navbarData.brandName;
 	const navbarItems = navbarData.navItems
 		.sort((a: { order: number }, b: { order: number }) => a.order - b.order)
 		.map((item: { title: string }, idx: number) => {
-			const href = navHrefMap[item.title] || "/#top";
-
 			return (
 				<li key={idx} className="cursor-pointer">
 					<Link
-						href={href}
+						href={"#"}
 						onClick={() => closeMenu(false)}
 						className="transition-colors relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-strawberry-red after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100 duration-200 hover:text-strawberry-red"
 					>
@@ -53,12 +38,10 @@ export default function NavBarContainer() {
 				<Button
 					key={idx}
 					btnText={item.text}
-					OnClickHandler={
-						() => {
-							closeMenu(false);
-							router.push(isPrimaryCta ? "/create-resume" : "/login");
-						}
-					}
+					OnClickHandler={() => {
+						closeMenu(false);
+						router.push(isPrimaryCta ? "/create-resume" : "/login");
+					}}
 					btnStyle={
 						item.text === "Login"
 							? "theme-button-secondary"

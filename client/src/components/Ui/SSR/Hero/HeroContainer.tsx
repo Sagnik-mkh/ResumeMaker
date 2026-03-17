@@ -1,6 +1,6 @@
 "use client";
 
-import Hero from "@/components/Ui/SSR/Hero";
+import Hero from "@/components/Ui/SSR/Hero/Hero";
 import { useRouter } from "next/navigation";
 
 export default function HeroContainer() {

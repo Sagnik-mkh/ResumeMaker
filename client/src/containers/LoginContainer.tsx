@@ -124,7 +124,7 @@ function LoginContainer() {
 					</label>
 
 					{message ? (
-						<div className="rounded-2xl border border-[var(--theme-border-strong)] bg-[var(--theme-surface-soft)] px-4 py-3 text-sm leading-6 theme-text-soft">
+						<div className="theme-surface-soft rounded-2xl border border-[var(--theme-border-strong)] px-4 py-3 text-sm leading-6 theme-text-soft">
 							{message}
 						</div>
 					) : null}

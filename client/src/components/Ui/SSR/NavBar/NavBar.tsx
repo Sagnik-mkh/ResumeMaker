@@ -1,6 +1,6 @@
-import DropDown from "../CSR/DropDown";
-import Brand from "../CSR/Brand";
-import MobileButton from "../CSR/MobileButton";
+import DropDown from "../../CSR/DropDown";
+import Brand from "../../CSR/Brand";
+import MobileButton from "../../CSR/MobileButton";
 
 type Props = {
 	navbarBrand: string;
@@ -16,7 +16,7 @@ export default function NavBar({
 	primaryButton,
 }: Props) {
 	return (
-		<div className="sticky top-0 z-50 border-b theme-nav backdrop-blur-xl">
+		<div className="sticky top-0 border-b z-100 bg-background/70 border-accent/30 backdrop-blur-xl">
 			<div className="container relative px-4 py-3 mx-auto">
 				<div className="min-h-0 px-0 navbar">
 					<div className="navbar-start">

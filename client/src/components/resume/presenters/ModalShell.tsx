@@ -39,7 +39,7 @@ export default function ModalShell({
 					<button
 						type="button"
 						onClick={onClose}
-						className="theme-text-muted btn btn-ghost btn-sm text-sm hover:bg-white/8"
+						className="theme-button-secondary btn btn-sm text-sm"
 					>
 						<FaRegWindowClose />
 					</button>

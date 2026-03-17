@@ -18,7 +18,7 @@ export default function ResumeScoreCard() {
 							</p>
 						</div>
 						<div className="inline-flex items-center gap-3 px-4 py-3 mt-8 text-sm rounded-full theme-badge">
-							<span className="h-2 w-2 rounded-full bg-[--theme-success]" />
+							<span className="h-2 w-2 rounded-full bg-[var(--theme-success)]" />
 							Recommended next step: export and tailor to the
 							target role
 						</div>

@@ -279,7 +279,7 @@ export default function ResumeWorkspace() {
 										<button
 											type="button"
 											onClick={() => experienceArray.remove(index)}
-											className="text-sm font-medium text-rose-300"
+											className="theme-text-primary text-sm font-medium"
 										>
 											Remove
 										</button>
@@ -334,7 +334,7 @@ export default function ResumeWorkspace() {
 										<button
 											type="button"
 											onClick={() => educationArray.remove(index)}
-											className="text-sm font-medium text-rose-300"
+											className="theme-text-primary text-sm font-medium"
 										>
 											Remove
 										</button>
@@ -408,7 +408,7 @@ export default function ResumeWorkspace() {
 										<button
 											type="button"
 											onClick={() => projectArray.remove(index)}
-											className="text-sm font-medium text-rose-300"
+											className="theme-text-primary text-sm font-medium"
 										>
 											Remove
 										</button>

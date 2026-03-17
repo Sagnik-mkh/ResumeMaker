@@ -3,7 +3,7 @@ import { FaGithub, FaHashtag, FaTwitter, FaYoutube } from "react-icons/fa6";
 
 export default function Footer() {
 	return (
-		<footer className="border-t border-[--theme-border] bg-black/25">
+		<footer className="border-t border-accent/10 bg-background">
 			<div className="container mx-auto grid gap-10 px-4 py-14 lg:grid-cols-[1.1fr_0.5fr_0.4fr]">
 				<div className="max-w-xl">
 					<div className="flex items-center gap-3">
@@ -28,17 +28,17 @@ export default function Footer() {
 					<p className="theme-eyebrow text-sm uppercase tracking-[0.32em]">
 						Navigate
 					</p>
-					<div className="mt-4 flex flex-col gap-3 text-sm">
-						<Link href="/#top" className="theme-text-soft transition hover:text-[var(--theme-text)]">
+					<div className="flex flex-col gap-3 mt-4 text-sm">
+						<Link href="/#top" className="transition theme-link-hover theme-text-soft">
 							Hero
 						</Link>
-						<Link href="/#how-it-works" className="theme-text-soft transition hover:text-[var(--theme-text)]">
+						<Link href="/#how-it-works" className="transition theme-link-hover theme-text-soft">
 							How it works
 						</Link>
-						<Link href="/#templates" className="theme-text-soft transition hover:text-[var(--theme-text)]">
+						<Link href="/#templates" className="transition theme-link-hover theme-text-soft">
 							Templates
 						</Link>
-						<Link href="/#pricing" className="theme-text-soft transition hover:text-[var(--theme-text)]">
+						<Link href="/#pricing" className="transition theme-link-hover theme-text-soft">
 							Pricing
 						</Link>
 					</div>
@@ -49,16 +49,16 @@ export default function Footer() {
 						Follow
 					</p>
 					<div className="grid grid-flow-col gap-3">
-						<a className="theme-text-muted rounded-2xl border border-[--theme-border-strong] p-3 transition-colors hover:text-[--theme-text]">
+						<a className="theme-link-hover theme-text-muted rounded-2xl border border-[--theme-border-strong] p-3 transition-colors">
 							<FaTwitter className="text-xl" />
 						</a>
-						<a className="theme-text-muted rounded-2xl border border-[--theme-border-strong] p-3 transition-colors hover:text-[--theme-text]">
+						<a className="theme-link-hover theme-text-muted rounded-2xl border border-[--theme-border-strong] p-3 transition-colors">
 							<FaYoutube className="text-xl" />
 						</a>
-						<a className="theme-text-muted rounded-2xl border border-[--theme-border-strong] p-3 transition-colors hover:text-[--theme-text]">
+						<a className="theme-link-hover theme-text-muted rounded-2xl border border-[--theme-border-strong] p-3 transition-colors">
 							<FaGithub className="text-xl" />
 						</a>
-						<a className="theme-text-muted rounded-2xl border border-[--theme-border-strong] p-3 transition-colors hover:text-[--theme-text]">
+						<a className="theme-link-hover theme-text-muted rounded-2xl border border-[--theme-border-strong] p-3 transition-colors">
 							<FaHashtag className="text-xl" />
 						</a>
 					</div>

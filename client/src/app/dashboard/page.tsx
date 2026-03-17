@@ -109,29 +109,21 @@ export default function DashboardPage() {
 			label: "Sections Done",
 			value: `${completedSections}/${completionItems.length}`,
 			icon: HiOutlineDocumentText,
-			accent: "text-pink-400",
-			tint: "bg-pink-500/10 border-pink-500/20",
 		},
 		{
 			label: "Experience",
 			value: `${resumeData.experience.length}`,
 			icon: HiOutlineCheckBadge,
-			accent: "text-violet-400",
-			tint: "bg-violet-500/10 border-violet-500/20",
 		},
 		{
 			label: "Projects",
 			value: `${resumeData.projects.length}`,
 			icon: RiFilePaper2Line,
-			accent: "text-blue-400",
-			tint: "bg-blue-500/10 border-blue-500/20",
 		},
 		{
 			label: "Skills",
 			value: `${resumeData.skills.length}`,
 			icon: PiBrain,
-			accent: "text-amber-400",
-			tint: "bg-amber-500/10 border-amber-500/20",
 		},
 	];
 	const breakdownItems = completionItems.map((item) => ({
@@ -234,9 +226,9 @@ export default function DashboardPage() {
 								<div className="grid gap-3 sm:grid-cols-2">
 									<Link
 										href="/create-resume"
-										className="theme-surface-soft rounded-[24px] p-4 transition hover:bg-white/[0.06]"
+										className="theme-interactive-card theme-surface-soft rounded-[24px] p-4"
 									>
-										<HiOutlineDocumentPlus className="text-xl text-pink-400" />
+										<HiOutlineDocumentPlus className="theme-text-primary text-xl" />
 										<p className="theme-text-heading mt-4 text-base font-semibold">
 											Continue building
 										</p>
@@ -247,9 +239,9 @@ export default function DashboardPage() {
 									<button
 										type="button"
 										onClick={resetResume}
-										className="theme-surface-soft rounded-[24px] p-4 text-left transition hover:bg-white/[0.06]"
+										className="theme-interactive-card theme-surface-soft rounded-[24px] p-4 text-left"
 									>
-										<HiOutlineLightBulb className="text-xl text-amber-400" />
+										<HiOutlineLightBulb className="theme-text-accent text-xl" />
 										<p className="theme-text-heading mt-4 text-base font-semibold">
 											Start fresh
 										</p>
@@ -265,8 +257,8 @@ export default function DashboardPage() {
 					<div className="grid gap-4">
 						<div className={dashboardCardClass}>
 							<div className="flex items-center gap-3">
-								<div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-amber-500/20 bg-amber-500/10">
-									<HiOutlineSparkles className="text-lg text-amber-400" />
+								<div className="theme-icon-panel flex h-10 w-10 items-center justify-center rounded-2xl">
+									<HiOutlineSparkles className="text-lg" />
 								</div>
 								<div>
 									<p className="theme-text-heading text-lg font-semibold">
@@ -307,10 +299,8 @@ export default function DashboardPage() {
 									return (
 										<div key={card.label} className="theme-surface-soft rounded-[24px] p-4">
 											<div className="flex items-center gap-3">
-												<div
-													className={`flex h-10 w-10 items-center justify-center rounded-2xl border ${card.tint}`}
-												>
-													<Icon className={`text-lg ${card.accent}`} />
+												<div className="theme-icon-panel flex h-10 w-10 items-center justify-center rounded-2xl">
+													<Icon className="text-lg" />
 												</div>
 												<p className="theme-text-soft text-sm">{card.label}</p>
 											</div>
@@ -328,8 +318,8 @@ export default function DashboardPage() {
 				<section className="grid gap-4 xl:grid-cols-[0.95fr_1.05fr]">
 					<div className={dashboardCardClass}>
 						<div className="flex items-center gap-3">
-							<div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-blue-500/20 bg-blue-500/10">
-								<HiOutlineDocumentText className="text-lg text-blue-400" />
+							<div className="theme-icon-panel flex h-10 w-10 items-center justify-center rounded-2xl">
+								<HiOutlineDocumentText className="text-lg" />
 							</div>
 							<div>
 								<p className="theme-text-heading text-lg font-semibold">
@@ -376,13 +366,13 @@ export default function DashboardPage() {
 								<Link
 									key={doc.title}
 									href="/create-resume"
-									className="theme-surface-soft rounded-[24px] p-4 transition hover:bg-white/[0.06]"
+									className="theme-interactive-card theme-surface-soft rounded-[24px] p-4"
 								>
 									<div className="flex items-start justify-between gap-3">
-										<div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-pink-500/10 text-pink-400">
+										<div className="theme-icon-panel flex h-12 w-12 items-center justify-center rounded-2xl">
 											<HiOutlineDocumentText className="text-2xl" />
 										</div>
-										<div className="flex items-center gap-1 rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-2.5 py-1 text-sm text-emerald-300">
+										<div className="theme-badge-success flex items-center gap-1 rounded-xl px-2.5 py-1 text-sm">
 											<HiOutlineSparkles className="text-sm" />
 											{doc.score}
 										</div>

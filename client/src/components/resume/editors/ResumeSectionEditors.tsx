@@ -19,7 +19,7 @@ function ModalActions({
 			<button
 				type="button"
 				onClick={onClose}
-				className="theme-text-muted rounded-full border border-[--theme-border-strong] px-5 py-3 text-sm transition hover:bg-white/8"
+				className="theme-button-secondary rounded-full px-5 py-3 text-sm transition"
 			>
 				Cancel
 			</button>
@@ -179,7 +179,7 @@ export function ExperienceEditor({ onClose }: { onClose: () => void }) {
 								<button
 									type="button"
 									onClick={() => remove(index)}
-									className="text-sm transition text-rose-300 hover:text-rose-200"
+									className="theme-text-primary text-sm transition"
 								>
 									Remove
 								</button>
@@ -236,7 +236,7 @@ export function ExperienceEditor({ onClose }: { onClose: () => void }) {
 								description: [""],
 							})
 						}
-						className="theme-text-muted rounded-full border border-[--theme-border-strong] px-5 py-3 text-sm transition hover:bg-white/8"
+						className="theme-button-secondary rounded-full px-5 py-3 text-sm transition"
 					>
 						Add experience
 					</button>
@@ -303,7 +303,7 @@ export function EducationEditor({ onClose }: { onClose: () => void }) {
 								<button
 									type="button"
 									onClick={() => remove(index)}
-									className="text-sm transition text-rose-300 hover:text-rose-200"
+									className="theme-text-primary text-sm transition"
 								>
 									Remove
 								</button>
@@ -357,7 +357,7 @@ export function EducationEditor({ onClose }: { onClose: () => void }) {
 								endDate: "",
 							})
 						}
-						className="theme-text-muted rounded-full border border-[--theme-border-strong] px-5 py-3 text-sm transition hover:bg-white/8"
+						className="theme-button-secondary rounded-full px-5 py-3 text-sm transition"
 					>
 						Add education
 					</button>
@@ -434,7 +434,7 @@ export function ProjectsEditor({ onClose }: { onClose: () => void }) {
 								<button
 									type="button"
 									onClick={() => remove(index)}
-									className="text-sm transition text-rose-300 hover:text-rose-200"
+									className="theme-text-primary text-sm transition"
 								>
 									Remove
 								</button>
@@ -487,7 +487,7 @@ export function ProjectsEditor({ onClose }: { onClose: () => void }) {
 								endDate: "",
 							})
 						}
-						className="theme-text-muted rounded-full border border-[--theme-border-strong] px-5 py-3 text-sm transition hover:bg-white/8"
+						className="theme-button-secondary rounded-full px-5 py-3 text-sm transition"
 					>
 						Add project
 					</button>
@@ -543,7 +543,7 @@ export function SkillsEditor({ onClose }: { onClose: () => void }) {
 								<button
 									type="button"
 									onClick={() => remove(index)}
-									className="theme-text-muted rounded-2xl border border-[--theme-border-strong] px-4 text-sm transition hover:bg-white/8"
+									className="theme-button-secondary rounded-2xl px-4 text-sm transition"
 								>
 									Remove
 								</button>
@@ -555,7 +555,7 @@ export function SkillsEditor({ onClose }: { onClose: () => void }) {
 					<button
 						type="button"
 						onClick={() => append("")}
-						className="theme-text-muted rounded-full border border-[--theme-border-strong] px-5 py-3 text-sm transition hover:bg-white/8"
+						className="theme-button-secondary rounded-full px-5 py-3 text-sm transition"
 					>
 						Add skill
 					</button>
