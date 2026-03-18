@@ -1,5 +1,5 @@
 import DropDown from "../../CSR/DropDown";
-import Brand from "../../CSR/Brand";
+import Brand from "../../CSR/Brand/Brand";
 import MobileButton from "../../CSR/MobileButton";
 
 type Props = {

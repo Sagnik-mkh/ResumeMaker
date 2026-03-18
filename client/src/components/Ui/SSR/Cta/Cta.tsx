@@ -5,7 +5,7 @@ import { HiOutlineArrowRight } from "react-icons/hi2";
 
 function Cta() {
 	return (
-		<section id="cta" className="container px-4 pb-24 mx-auto">
+		<section id="cta" className="container px-4 pb-24 mx-auto select-none">
 			<motion.div
 				{...fadeInUp}
 				className="container px-6 py-10 mx-auto border shadow-2xl bg-linear-to-r from-background to-slate-900/50 rounded-4xl border-slate-100/20 theme-shadow sm:px-10"
@@ -27,14 +27,14 @@ function Cta() {
 					<div className="flex flex-col gap-3 sm:flex-row">
 						<Link
 							href="/create-resume"
-							className="font-semibold transition border-none rounded-full btn theme-button-primary"
+							className="font-semibold border-none rounded-full btn btn-lg bg-primary text-secondary"
 						>
 							<span>Build my resume</span>
 							<HiOutlineArrowRight className="text-base" />
 						</Link>
 						<Link
 							href="/dashboard"
-							className="font-semibold transition border-none rounded-full btn theme-button-secondary"
+							className="font-semibold transition border-none rounded-full btn btn-lg theme-button-secondary"
 						>
 							Open dashboard
 						</Link>

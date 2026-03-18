@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
-import NavBarContainer from "@/containers/NavBar/NavBarContainer";
+import NavBarContainer from "@/containers/NavBarContainer/NavBarContainer";
 import "./globals.css";
 import Providers from "./providers";
 

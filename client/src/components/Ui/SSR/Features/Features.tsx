@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Features() {
 	return (
-		<section id="features" className="container px-4 py-24 mx-auto">
+		<section id="features" className="container px-4 py-24 mx-auto select-none">
 			<div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
 				<motion.div
 					{...fadeInUp}

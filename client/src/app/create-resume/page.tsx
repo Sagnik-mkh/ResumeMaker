@@ -2,7 +2,7 @@ import ResumeWorkspace from "@/components/resume/ResumeWorkspace";
 
 export default function CreateResume() {
 	return (
-		<main className="min-h-screen px-4 py-6 sm:px-6 lg:px-8">
+		<main className="theme-page-shell min-h-screen px-4 py-6 sm:px-6 lg:px-8">
 			<div className="mx-auto max-w-7xl space-y-6">
 				<section className="theme-glass rounded-[32px] border border-[var(--theme-border-strong)] px-6 py-8 shadow-2xl shadow-black/20 backdrop-blur-xl sm:px-8">
 					<div className="max-w-3xl">

@@ -43,7 +43,7 @@ function LoginContainer() {
 	}
 
 	return (
-		<div className="mx-auto grid min-h-[calc(100vh-5rem)] max-w-6xl items-center gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
+		<div className="theme-page-shell mx-auto grid min-h-[calc(100vh-5rem)] max-w-6xl items-center gap-8 rounded-[40px] px-4 py-10 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
 			<section className="theme-glass rounded-[32px] border border-[var(--theme-border-strong)] p-6 shadow-2xl shadow-black/20 backdrop-blur-xl sm:p-8 lg:p-10">
 				<div className="max-w-xl">
 					<p className="theme-eyebrow text-xs font-semibold uppercase tracking-[0.32em]">
