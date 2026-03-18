@@ -1,9 +1,16 @@
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaGithub, FaHashtag, FaTwitter, FaYoutube } from "react-icons/fa6";
 
 export default function Footer() {
 	return (
-		<footer className="border-t select-none border-accent/10 bg-background">
+		<motion.footer
+			initial={{ opacity: 0, y: 24 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			viewport={{ once: true, amount: 0.15 }}
+			transition={{ duration: 0.55, ease: "easeOut" }}
+			className="border-t select-none border-accent/10 bg-background"
+		>
 			<div className="container mx-auto grid gap-10 px-4 py-14 lg:grid-cols-[1.1fr_0.5fr_0.4fr]">
 				<div className="max-w-xl">
 					<div className="flex items-center gap-3">
@@ -61,21 +68,33 @@ export default function Footer() {
 						Follow
 					</p>
 					<div className="grid grid-flow-col gap-3">
-						<a className="p-3 transition-colors border hover:border-secondary hover:text-secondary text-accent rounded-2xl border-accent/90">
+						<motion.a
+							whileHover={{ y: -5, scale: 1.08 }}
+							className="p-3 transition-colors border hover:border-secondary hover:text-secondary text-accent rounded-2xl border-accent/90"
+						>
 							<FaTwitter className="text-xl" />
-						</a>
-						<a className="p-3 transition-colors border hover:border-secondary hover:text-secondary text-accent rounded-2xl border-accent/90">
+						</motion.a>
+						<motion.a
+							whileHover={{ y: -5, scale: 1.08 }}
+							className="p-3 transition-colors border hover:border-secondary hover:text-secondary text-accent rounded-2xl border-accent/90"
+						>
 							<FaYoutube className="text-xl" />
-						</a>
-						<a className="p-3 transition-colors border hover:border-secondary hover:text-secondary text-accent rounded-2xl border-accent/90">
+						</motion.a>
+						<motion.a
+							whileHover={{ y: -5, scale: 1.08 }}
+							className="p-3 transition-colors border hover:border-secondary hover:text-secondary text-accent rounded-2xl border-accent/90"
+						>
 							<FaGithub className="text-xl" />
-						</a>
-						<a className="p-3 transition-colors border hover:border-secondary hover:text-secondary text-accent rounded-2xl border-accent/90">
+						</motion.a>
+						<motion.a
+							whileHover={{ y: -5, scale: 1.08 }}
+							className="p-3 transition-colors border hover:border-secondary hover:text-secondary text-accent rounded-2xl border-accent/90"
+						>
 							<FaHashtag className="text-xl" />
-						</a>
+						</motion.a>
 					</div>
 				</div>
 			</div>
-		</footer>
+		</motion.footer>
 	);
 }

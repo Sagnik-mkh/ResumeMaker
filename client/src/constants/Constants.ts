@@ -334,3 +334,43 @@ export const fadeInUp = {
 	viewport: { once: true, amount: 0.2 },
 	transition: { duration: 0.55, ease: "easeOut" as const },
 };
+
+export const sectionStagger = {
+	initial: {},
+	whileInView: {
+		transition: {
+			staggerChildren: 0.12,
+			delayChildren: 0.08,
+		},
+	},
+	viewport: { once: true, amount: 0.18 },
+};
+
+export const staggerItemUp = {
+	initial: { opacity: 0, y: 26, scale: 0.98 },
+	whileInView: {
+		opacity: 1,
+		y: 0,
+		scale: 1,
+		transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] as const },
+	},
+};
+
+export const heroTextReveal = {
+	initial: { opacity: 0, y: 30 },
+	animate: {
+		opacity: 1,
+		y: 0,
+		transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
+	},
+};
+
+export const heroStagger = {
+	initial: {},
+	animate: {
+		transition: {
+			staggerChildren: 0.12,
+			delayChildren: 0.12,
+		},
+	},
+};

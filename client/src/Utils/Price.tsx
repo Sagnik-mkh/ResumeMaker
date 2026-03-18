@@ -1,4 +1,4 @@
-import { fadeInUp, pricingPlans } from "@/constants/Constants";
+import { pricingPlans, staggerItemUp } from "@/constants/Constants";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { HiCheck } from "react-icons/hi2";
@@ -6,19 +6,17 @@ import { HiCheck } from "react-icons/hi2";
 const Price = pricingPlans.map((plan, index) => (
 	<motion.div
 		key={plan.name}
-		{...fadeInUp}
-		transition={{
-			duration: 0.32,
-			ease: "easeOut",
-			delay: index * 0.04,
-		}}
+		variants={staggerItemUp}
+		whileHover={{ y: -12, scale: 1.015 }}
+		transition={{ duration: 0.3, ease: "easeOut", delay: index * 0.03 }}
 		className={`group relative overflow-hidden rounded-4xl p-8 transition-all duration-300 hover:-translate-y-1 ${
 			plan.highlight
 				? "border border-primary/35 bg-linear-to-b from-primary/10 via-background/88 to-black/95 shadow-[0_30px_100px_rgba(8,18,33,0.45)]"
-				: "border border-accent/14 bg-linear-to-b from-[#112744]/68 via-background/82 to-black/92 shadow-[0_24px_80px_rgba(8,18,33,0.34)]"
+				: "border border-accent/14 bg-linear-to-b from-[#112744] via-background/82 to-black/92 shadow-[0_24px_80px_rgba(8,18,33,0.34)]"
 		}`}
 	>
 		<div className="pointer-events-none absolute inset-x-6 top-0 h-px bg-linear-to-r from-transparent via-secondary/45 to-transparent" />
+		<div className="pricing-card-shine pointer-events-none absolute inset-y-0 -left-1/2 w-1/2" />
 		<div className="flex items-start justify-between gap-4">
 			<div>
 				<p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-accent/72">

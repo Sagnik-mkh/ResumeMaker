@@ -30,7 +30,7 @@ export default function NavBarContainer() {
 							scrollToSection(getSectionId(item.href));
 							closeMenu(false);
 						}}
-						className="transition-colors relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-strawberry-red after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100 duration-200 hover:text-strawberry-red"
+						className="theme-text-main theme-text-underline"
 					>
 						{item.title}
 					</button>
@@ -42,7 +42,6 @@ export default function NavBarContainer() {
 		.map((item: { text: string }, idx: number) => {
 			const isPrimaryCta =
 				item.text === "Start Free" || item.text === "Get Started";
-
 			return (
 				<Button
 					key={idx}

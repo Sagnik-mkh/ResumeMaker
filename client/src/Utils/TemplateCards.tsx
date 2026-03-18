@@ -1,17 +1,14 @@
-import { fadeInUp, templateCards } from "@/constants/Constants";
-import Image from "next/image";
+import { staggerItemUp, templateCards } from "@/constants/Constants";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const TemplateCards = templateCards.map((template, index) => (
 	<motion.div
 		key={template.name}
-		{...fadeInUp}
-		transition={{
-			duration: 0.5,
-			ease: "easeOut",
-			delay: index * 0.07,
-		}}
-		className="p-4 border border-accent/15 bg-dark-accent/30 rounded-3xl"
+		variants={staggerItemUp}
+		whileHover={{ y: -12, rotate: index % 2 === 0 ? -1.2 : 1.2 }}
+		transition={{ duration: 0.32, ease: "easeOut", delay: index * 0.04 }}
+		className="template-card-glow group p-4 border border-accent/15 bg-dark-accent/30 rounded-3xl"
 	>
 		<div className="p-3 border theme-shadow bg-slate-100/8 border-slate-100/14 rounded-3xl">
 			<Image
@@ -19,7 +16,7 @@ const TemplateCards = templateCards.map((template, index) => (
 				alt={`${template.name} template preview`}
 				width={420}
 				height={560}
-				className="object-cover w-full h-auto rounded-2xl"
+				className="object-cover w-full h-auto rounded-2xl transition-transform duration-700 ease-out group-hover:scale-[1.04]"
 			/>
 		</div>
 		<div className="flex items-center justify-between gap-3 mt-5">

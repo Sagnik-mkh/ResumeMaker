@@ -21,7 +21,13 @@ export default function LandingPage() {
 
 	return (
 		<React.Fragment>
-			<main className="bg-linear-to-b from-background via-slate-950 to-black">
+			<main className="relative overflow-hidden bg-linear-to-b from-background via-slate-950 to-black">
+				<div className="pointer-events-none absolute inset-0 overflow-hidden">
+					<div className="landing-ambient-orb landing-ambient-orb-left" />
+					<div className="landing-ambient-orb landing-ambient-orb-right" />
+					<div className="landing-ambient-orb landing-ambient-orb-bottom" />
+					<div className="landing-grid-drift absolute inset-x-0 top-0 h-[1200px] opacity-30" />
+				</div>
 				<HeroContainer />
 				<div ref={registerSectionRef("how-it-works")}>
 					<Steps />

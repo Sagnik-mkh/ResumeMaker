@@ -5,20 +5,22 @@ import { HiOutlineArrowRight } from "react-icons/hi2";
 
 function Cta() {
 	return (
-		<section id="cta" className="container px-4 pb-24 mx-auto select-none">
+		<section id="cta" className="container px-4 pb-20 mx-auto select-none sm:pb-24">
 			<motion.div
 				{...fadeInUp}
-				className="container px-6 py-10 mx-auto border shadow-2xl bg-linear-to-r from-background to-slate-900/50 rounded-4xl border-slate-100/20 theme-shadow sm:px-10"
+				whileHover={{ y: -8, scale: 1.01 }}
+				transition={{ duration: 0.35, ease: "easeOut" }}
+				className="cta-shell container mx-auto rounded-4xl border border-slate-100/20 bg-linear-to-r from-background to-slate-900/50 px-5 py-8 shadow-2xl theme-shadow sm:rounded-4xl sm:px-10 sm:py-10"
 			>
 				<div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
 					<div className="max-w-2xl">
 						<p className="text-accent/86 text-sm uppercase tracking-[0.36em]">
 							Call To Action
 						</p>
-						<h2 className="mt-4 text-4xl font-semibold text-secondary">
+						<h2 className="mt-4 text-3xl font-semibold text-secondary sm:text-4xl">
 							Start building your AI-assisted resume today.
 						</h2>
-						<p className="mt-4 text-lg leading-8 text-secondary/60">
+						<p className="mt-4 text-base leading-7 text-secondary/60 sm:text-lg sm:leading-8">
 							Use the current builder, preview your draft live,
 							and shape a much stronger application workflow from
 							the first session.

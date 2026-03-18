@@ -1,4 +1,4 @@
-import { fadeInUp } from "@/constants/Constants";
+import { fadeInUp, sectionStagger } from "@/constants/Constants";
 import HowItWorks from "@/Utils/HowItWorks";
 import { motion } from "framer-motion";
 
@@ -18,7 +18,15 @@ function Steps() {
 					help you move faster without sacrificing quality.
 				</p>
 			</motion.div>
-			<div className="grid gap-6 mt-14 lg:grid-cols-3">{HowItWorks}</div>
+			<motion.div
+				variants={sectionStagger}
+				initial="initial"
+				whileInView="whileInView"
+				viewport={sectionStagger.viewport}
+				className="grid gap-6 mt-14 lg:grid-cols-3"
+			>
+				{HowItWorks}
+			</motion.div>
 		</section>
 	);
 }

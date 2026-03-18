@@ -1,23 +1,23 @@
-import { fadeInUp } from "@/constants/Constants";
+import { fadeInUp, sectionStagger } from "@/constants/Constants";
 import MainFeatures from "@/Utils/MainFeatures";
 import { motion } from "framer-motion";
 
 export default function Features() {
 	return (
-		<section id="features" className="container px-4 py-24 mx-auto select-none">
+		<section id="features" className="container px-4 py-20 mx-auto select-none sm:py-24">
 			<div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
 				<motion.div
 					{...fadeInUp}
-					className="p-8 bg-linear-to-r from-highligh-text/20 via-dark-accent/45 to-background rounded-4xl"
+					className="rounded-[2rem] bg-linear-to-r from-highligh-text/20 via-dark-accent/45 to-background p-6 sm:rounded-4xl sm:p-8"
 				>
 					<p className="text-accent/86 font-semibold text-sm uppercase tracking-[0.36em]">
 						AI Features
 					</p>
-					<h2 className="mt-4 text-4xl font-semibold text-secondary">
+					<h2 className="mt-4 text-3xl font-semibold text-secondary sm:text-4xl">
 						The AI does the heavy lifting where resume writing
 						usually slows down.
 					</h2>
-					<p className="mt-4 leading-8 text-secondary/60">
+					<p className="mt-4 text-sm leading-7 text-secondary/60 sm:text-base sm:leading-8">
 						Use AI to tighten bullet points, improve clarity, tailor
 						for role context, and catch weak phrasing before you
 						apply.
@@ -33,7 +33,15 @@ export default function Features() {
 						</p>
 					</div>
 				</motion.div>
-				<div className="grid gap-4 md:grid-cols-2">{MainFeatures}</div>
+				<motion.div
+					variants={sectionStagger}
+					initial="initial"
+					whileInView="whileInView"
+					viewport={sectionStagger.viewport}
+					className="grid gap-4 md:grid-cols-2"
+				>
+					{MainFeatures}
+				</motion.div>
 			</div>
 		</section>
 	);

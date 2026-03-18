@@ -16,14 +16,14 @@ export default function NavBar({
 	primaryButton,
 }: Props) {
 	return (
-		<div className="sticky top-0 border-b z-100 bg-background/70 border-accent/30 backdrop-blur-xl">
+		<div className="sticky top-0 border-b z-100 theme-nav">
 			<div className="container relative px-4 py-3 mx-auto">
 				<div className="min-h-0 px-0 navbar">
 					<div className="navbar-start">
 						<Brand brandName={navbarBrand} />
 					</div>
 					<div className="hidden navbar-center lg:flex">
-						<ul className="gap-2 px-1 text-base text-honeydew menu menu-horizontal">
+						<ul className="gap-2 px-1 text-base menu menu-horizontal">
 							{navbarItems}
 						</ul>
 					</div>
