@@ -9,10 +9,12 @@ type Props = {
 	OnClickHandler: () => void;
 };
 
-const HeroBage = "ATS score guidance, AI writing, and instant formatting";
-const HeroMain = "Build a resume that reads like your best interview.";
-const HeroAbout =
-	"ResuMake turns rough experience into sharp, role-ready resumes with cleaner formatting, stronger bullets, and real-time ATS feedback.";
+const heroDetails = {
+	heroBadge: "ATS score guidance, AI writing, and instant formatting",
+	heroMain: "Build a resume that reads like your best interview.",
+	heroAbout:
+		"ResuMake turns rough experience into sharp, role-ready resumes with cleaner formatting, stronger bullets, and real-time ATS feedback.",
+};
 
 export default function Hero({ OnClickHandler }: Props) {
 	return (
@@ -35,21 +37,25 @@ export default function Hero({ OnClickHandler }: Props) {
 				<div className="max-w-2xl">
 					<motion.div
 						variants={heroTextReveal}
-						className="inline-flex max-w-full items-center gap-2 rounded-full border border-highligh-text bg-highligh-text/10 px-3 py-2 text-[10px] text-highligh-text theme-shadow sm:gap-3 sm:px-4 sm:text-sm"
+						className="inline-flex items-center max-w-full gap-2 px-3 py-2 text-xs rounded-full theme-badge-secondary theme-shadow sm:gap-3 sm:px-4 sm:text-sm"
 					>
 						<span className="w-2 h-2 rounded-full bg-highligh-text" />
-						<span className="truncate">{HeroBage}</span>
+						<span className="truncate">
+							{heroDetails.heroBadge}
+						</span>
 					</motion.div>
 					<motion.h1
 						variants={heroTextReveal}
-						className="mt-8 text-[2.15rem] font-semibold tracking-tight text-secondary sm:text-5xl md:text-6xl lg:text-7xl"
+						className="mt-8 text-4xl font-semibold tracking-tight text-secondary sm:text-5xl md:text-6xl lg:text-7xl"
 					>
-						{HeroMain}
+						{heroDetails.heroMain}
 					</motion.h1>
 					<motion.p
 						variants={heroTextReveal}
 						className="max-w-xl mt-6 text-base leading-7 theme-text-faint sm:text-base sm:leading-8"
-					></motion.p>
+					>
+						{heroDetails.heroAbout}
+					</motion.p>
 					<motion.div
 						variants={heroTextReveal}
 						className="flex flex-col gap-4 mt-10 sm:flex-row"

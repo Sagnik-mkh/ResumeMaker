@@ -16,7 +16,7 @@ export default function NavBar({
 	primaryButton,
 }: Props) {
 	return (
-		<div className="sticky top-0 border-b z-100 theme-nav">
+		<div className="sticky top-0 border-b z-100 theme-glass">
 			<div className="container relative px-4 py-3 mx-auto">
 				<div className="min-h-0 px-0 navbar">
 					<div className="navbar-start">

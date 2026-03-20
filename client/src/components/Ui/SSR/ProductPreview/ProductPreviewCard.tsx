@@ -8,7 +8,7 @@ export default function HeroProductPreview() {
 
 	return (
 		<motion.div
-			className="relative w-full max-w-[42rem] mx-auto"
+			className="relative w-full max-w-2xl mx-auto"
 			initial={{ opacity: 0, x: 36, scale: 0.98 }}
 			animate={{ opacity: 1, x: 0, scale: 1 }}
 			transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
@@ -19,7 +19,7 @@ export default function HeroProductPreview() {
 
 			<div className="preview-spin-stage relative overflow-hidden rounded-[1.75rem] border border-dark-accent/50 bg-dark-accent/30 p-2 backdrop-blur-3xl theme-shadow sm:rounded-4xl sm:p-4">
 				<motion.div
-					className="preview-spin-card relative min-h-[34rem] sm:min-h-[40rem] lg:min-h-[44rem]"
+					className="preview-spin-card relative min-h-136 sm:min-h-160 lg:min-h-176"
 					animate={{ rotateY: [0, 0, 180, 180, 360, 360] }}
 					transition={{
 						duration: 12,
