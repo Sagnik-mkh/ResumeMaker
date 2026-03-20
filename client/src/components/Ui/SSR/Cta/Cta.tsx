@@ -1,11 +1,14 @@
-import { fadeInUp } from "@/constants/Constants";
+import { fadeInUp } from "@/constants/AnimationConstants";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { HiOutlineArrowRight } from "react-icons/hi2";
 
 function Cta() {
 	return (
-		<section id="cta" className="container px-4 pb-20 mx-auto select-none sm:pb-24">
+		<section
+			id="cta"
+			className="container px-4 pb-20 mx-auto select-none sm:pb-24"
+		>
 			<motion.div
 				{...fadeInUp}
 				whileHover={{ y: -8, scale: 1.01 }}

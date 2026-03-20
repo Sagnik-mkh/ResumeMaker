@@ -3,7 +3,7 @@ import Button from "../../CSR/Button";
 import ProductPreviewCard from "../ProductPreview/ProductPreviewCard";
 import HeroStars from "@/Utils/HeroStars";
 import { motion } from "framer-motion";
-import { heroStagger, heroTextReveal } from "@/constants/Constants";
+import { heroStagger, heroTextReveal } from "@/constants/AnimationConstants";
 
 type Props = {
 	OnClickHandler: () => void;

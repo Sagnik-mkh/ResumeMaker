@@ -1,4 +1,5 @@
-import { staggerItemUp, templateCards } from "@/constants/Constants";
+import { staggerItemUp } from "@/constants/AnimationConstants";
+import { templateCards } from "@/constants/ContentConstants";
 import { motion } from "framer-motion";
 import Image from "next/image";
 

@@ -1,4 +1,5 @@
-import { howItWorksSteps, staggerItemUp } from "@/constants/Constants";
+import { staggerItemUp } from "@/constants/AnimationConstants";
+import { howItWorksSteps } from "@/constants/ContentConstants";
 import { motion } from "framer-motion";
 
 const HowItWorks = howItWorksSteps.map((item, index) => {
@@ -13,7 +14,11 @@ const HowItWorks = howItWorksSteps.map((item, index) => {
 				scale: 1.015,
 				boxShadow: "0 30px 80px rgba(8,18,33,0.38)",
 			}}
-			transition={{ duration: 0.28, ease: "easeOut", delay: index * 0.04 }}
+			transition={{
+				duration: 0.28,
+				ease: "easeOut",
+				delay: index * 0.04,
+			}}
 			className="theme-shadow group border border-accent/20 bg-highligh-text/7 rounded-[30px] p-7"
 		>
 			<div className="flex items-center justify-between gap-4">

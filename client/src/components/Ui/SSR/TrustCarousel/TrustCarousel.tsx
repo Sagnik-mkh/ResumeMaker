@@ -19,7 +19,7 @@ const genLogos = () => {
 
 export default function TrustCarousel() {
 	return (
-		<section id="reviews" className="theme-section-divider border-y">
+		<section id="reviews">
 			<div className="container px-4 py-20 mx-auto overflow-hidden">
 				<div className="flex flex-col items-center gap-4 mb-12 text-center">
 					<h2 className="max-w-3xl text-4xl font-semibold theme-text-heading">

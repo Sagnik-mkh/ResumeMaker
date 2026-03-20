@@ -1,4 +1,5 @@
-import { aiFeatures, staggerItemUp } from "@/constants/Constants";
+import { staggerItemUp } from "@/constants/AnimationConstants";
+import { aiFeatures } from "@/constants/ContentConstants";
 import { motion } from "framer-motion";
 
 const MainFeatures = aiFeatures.map((feature, index) => {
@@ -9,7 +10,11 @@ const MainFeatures = aiFeatures.map((feature, index) => {
 			key={feature.title}
 			variants={staggerItemUp}
 			whileHover={{ y: -10, scale: 1.015 }}
-			transition={{ duration: 0.28, ease: "easeOut", delay: index * 0.04 }}
+			transition={{
+				duration: 0.28,
+				ease: "easeOut",
+				delay: index * 0.04,
+			}}
 			className="group border border-accent/20 bg-linear-to-r from-highligh-text/20 via-dark-accent/45 to-background rounded-[28px] p-6"
 		>
 			<motion.div

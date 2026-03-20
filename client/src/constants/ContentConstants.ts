@@ -1,3 +1,4 @@
+import { TargetAndTransition } from "framer-motion";
 import {
 	HiOutlineBolt,
 	HiOutlineCheckBadge,
@@ -7,8 +8,6 @@ import {
 	HiOutlineRocketLaunch,
 	HiOutlineSparkles,
 } from "react-icons/hi2";
-
-export const BASE_URL = "http://localhost:3001/api";
 
 export const NavFallbackData = {
 	brandName: "ResumeMaker",
@@ -328,49 +327,30 @@ export const pricingPlans = [
 	},
 ];
 
-export const fadeInUp = {
-	initial: { opacity: 0, y: 28 },
-	whileInView: { opacity: 1, y: 0 },
-	viewport: { once: true, amount: 0.2 },
-	transition: { duration: 0.55, ease: "easeOut" as const },
-};
-
-export const sectionStagger = {
-	initial: {},
-	whileInView: {
-		transition: {
-			staggerChildren: 0.12,
-			delayChildren: 0.08,
-		},
+export const productPreviewFrontContent = {
+	badge: "Live Product Preview",
+	heading: "AI-guided editing with a recruiter-first preview.",
+	ats: {
+		heading: "ATS score",
+		score: "92",
+		qualityMetrics: [
+			{ label: "Content quality", value: 94 },
+			{ label: "ATS alignment", value: 88 },
+			{ label: "Application ready", value: 91 },
+		],
 	},
-	viewport: { once: true, amount: 0.18 },
-};
-
-export const staggerItemUp = {
-	initial: { opacity: 0, y: 26, scale: 0.98 },
-	whileInView: {
-		opacity: 1,
-		y: 0,
-		scale: 1,
-		transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] as const },
+	profile: {
+		shortHand: "ER",
+		name: "Emily Roberts",
+		position: "Product Manager",
 	},
-};
-
-export const heroTextReveal = {
-	initial: { opacity: 0, y: 30 },
-	animate: {
-		opacity: 1,
-		y: 0,
-		transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
+	ai: {
+		heading: "AI Suggestions",
+		activityItems: [
+			"Summary rewritten with stronger impact",
+			"Experience bullets tightened for recruiter scan speed",
+			"Template switched to ATS friendly layout",
+		],
 	},
-};
-
-export const heroStagger = {
-	initial: {},
-	animate: {
-		transition: {
-			staggerChildren: 0.12,
-			delayChildren: 0.12,
-		},
-	},
+	review: ["Executive", "Minimal", "ATS-Ready"],
 };

@@ -1,4 +1,4 @@
-import { fadeInUp, sectionStagger } from "@/constants/Constants";
+import { fadeInUp, sectionStagger } from "@/constants/AnimationConstants";
 import TemplateCards from "@/Utils/TemplateCards";
 import { motion } from "framer-motion";
 import Link from "next/link";

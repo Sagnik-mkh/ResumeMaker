@@ -1,10 +1,13 @@
-import { fadeInUp, sectionStagger } from "@/constants/Constants";
+import { fadeInUp, sectionStagger } from "@/constants/AnimationConstants";
 import HowItWorks from "@/Utils/HowItWorks";
 import { motion } from "framer-motion";
 
 function Steps() {
 	return (
-		<section id="how-it-works" className="container px-4 py-24 mx-auto select-none">
+		<section
+			id="how-it-works"
+			className="container px-4 py-24 mx-auto select-none"
+		>
 			<motion.div {...fadeInUp} className="max-w-3xl mx-auto text-center">
 				<p className="text-accent/86 text-sm uppercase font-semibold tracking-[0.36em]">
 					How It Works

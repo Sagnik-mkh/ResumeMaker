@@ -1,7 +1,8 @@
-import { pricingPlans, staggerItemUp } from "@/constants/Constants";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { HiCheck } from "react-icons/hi2";
+import { pricingPlans } from "@/constants/ContentConstants";
+import { staggerItemUp } from "@/constants/AnimationConstants";
 
 const Price = pricingPlans.map((plan, index) => (
 	<motion.div

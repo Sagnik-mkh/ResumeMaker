@@ -9,9 +9,12 @@ import Features from "../Ui/SSR/Features/Features";
 import PricingPlans from "../Ui/SSR/PricingPlans/PricingPlans";
 import Cta from "../Ui/SSR/Cta/Cta";
 import { useIsMobileMenuOpenStore } from "@/store/navStore";
+import TrustCarousel from "../Ui/SSR/TrustCarousel/TrustCarousel";
 
 export default function LandingPage() {
-	const setSectionRef = useIsMobileMenuOpenStore((state) => state.setSectionRef);
+	const setSectionRef = useIsMobileMenuOpenStore(
+		(state) => state.setSectionRef,
+	);
 	const registerSectionRef = useCallback(
 		(sectionId: string) => (element: HTMLDivElement | null) => {
 			setSectionRef(sectionId, element);
@@ -32,6 +35,7 @@ export default function LandingPage() {
 				<div ref={registerSectionRef("how-it-works")}>
 					<Steps />
 				</div>
+				<TrustCarousel />
 				<div ref={registerSectionRef("templates")}>
 					<TemplatePreview />
 				</div>

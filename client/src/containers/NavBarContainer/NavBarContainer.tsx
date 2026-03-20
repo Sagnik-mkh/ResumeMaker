@@ -3,7 +3,7 @@
 import Button from "@/components/Ui/CSR/Button";
 import NavBar from "@/components/Ui/SSR/NavBar/NavBar";
 import { useRouter } from "next/navigation";
-import { NavFallbackData } from "@/constants/Constants";
+import { NavFallbackData } from "@/constants/ContentConstants";
 import { useIsMobileMenuOpenStore } from "@/store/navStore";
 
 export default function NavBarContainer() {

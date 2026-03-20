@@ -1,4 +1,4 @@
-import { Stars } from "@/constants/Constants";
+import { Stars } from "@/constants/ContentConstants";
 
 const planets = [
 	{

@@ -1,10 +1,13 @@
-import { fadeInUp, sectionStagger } from "@/constants/Constants";
 import { motion } from "framer-motion";
 import Price from "@/Utils/Price";
+import { fadeInUp, sectionStagger } from "@/constants/AnimationConstants";
 
 export default function PricingPlans() {
 	return (
-		<section id="pricing" className="container px-4 py-20 mx-auto select-none sm:py-24">
+		<section
+			id="pricing"
+			className="container px-4 py-20 mx-auto select-none sm:py-24"
+		>
 			<motion.div {...fadeInUp} className="max-w-3xl mx-auto text-center">
 				<p className="text-accent/86 text-sm uppercase tracking-[0.36em]">
 					Pricing

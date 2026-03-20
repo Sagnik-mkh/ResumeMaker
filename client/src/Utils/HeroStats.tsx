@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { heroStats } from "@/constants/Constants";
+import { heroStats } from "@/constants/ContentConstants";
 
 const HeroStats = heroStats.map((item, index) => (
 	<motion.div

@@ -1,10 +1,13 @@
-import { fadeInUp, sectionStagger } from "@/constants/Constants";
+import { fadeInUp, sectionStagger } from "@/constants/AnimationConstants";
 import MainFeatures from "@/Utils/MainFeatures";
 import { motion } from "framer-motion";
 
 export default function Features() {
 	return (
-		<section id="features" className="container px-4 py-20 mx-auto select-none sm:py-24">
+		<section
+			id="features"
+			className="container px-4 py-20 mx-auto select-none sm:py-24"
+		>
 			<div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
 				<motion.div
 					{...fadeInUp}
