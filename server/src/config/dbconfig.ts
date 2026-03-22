@@ -1,12 +1,10 @@
+import { config } from "./serverConfig";
 import mongoose from "mongoose";
-import { DB_URL } from "./serverConfig";
 
-export default async function connectDB() {
+export default async function connectDB(): Promise<void> {
 	try {
-		if (!DB_URL) throw new Error("DB_URL not defined");
-
-		await mongoose.connect(DB_URL);
-		console.log("Connected to DB");
+		await mongoose.connect(config.db.uri, { dbName: config.db.name });
+		console.log(`MongoDB connected -> ${config.db.name}`);
 	} catch (error) {
 		console.log(error);
 	}
